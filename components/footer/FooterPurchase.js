@@ -10,27 +10,23 @@ export default function FooterPurchase() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.selectAll}>
-        <CheckBox/>
-        <Text style={styles.selectAllText}>Chọn tất cả</Text>
+      <CheckBox/>
+      <Text style={styles.selectAllText}>Select all</Text>
+      <Text style={styles.totalPrice}>Total payment: {totalPrice}</Text>
+      <TouchableOpacity style={styles.checkoutButton}>
+        <Text style={styles.checkoutButtonText}>Purchase</Text>
       </TouchableOpacity>
-      <View style={styles.totalContainer}>
-        <Text style={styles.totalPrice}>Tổng cộng: {totalPrice}</Text>
-        <TouchableOpacity style={styles.checkoutButton}>
-          <Text style={styles.checkoutButtonText}>Thanh toán</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
-    borderTopWidth: 1,
-    borderTopColor: '#e2e2e2',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    flexDirection: 'row', // Sắp xếp các phần tử con theo hàng ngang
+    justifyContent: 'space-between', // Cách đều các phần tử
+    alignItems: 'center', // Căn giữa các phần tử theo chiều dọc
+    width: "100%",
+    padding: 10, // Thêm padding để không gian trở nên rộng rãi hơn
   },
   selectAll: {
     flexDirection: 'row',
@@ -44,7 +40,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 10,
   },
   totalPrice: {
     fontSize: 18,
@@ -52,9 +47,9 @@ const styles = StyleSheet.create({
   },
   checkoutButton: {
     backgroundColor: '#20A090',
+    borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 5,
   },
   checkoutButtonText: {
     color: '#fff',

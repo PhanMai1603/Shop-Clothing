@@ -6,6 +6,7 @@ import Owner from './Owner';
 import Status from './Status';
 import CheckBox from './CheckBox';
 import Quantity from './Quantity';
+import Delete from './Delete';
 
 export default function ProductCart() {
     return (
@@ -13,12 +14,14 @@ export default function ProductCart() {
             <Pressable style={styles.container__details} >
                 <Image style={styles.image} source={require('../../assets/images/product1.png')} />
                 <SafeAreaView style={styles.info}>
-                    <Owner/>
-                    <Status />
-                    <CheckBox/>
-                    <Quantity/>
                     <ProductName />
                     <PriceNotFree/>
+                    <Quantity/>
+                </SafeAreaView>
+                <SafeAreaView style={styles.infor}>
+                    <Delete/>
+                    <CheckBox/>
+                    <Owner/>
                 </SafeAreaView>
             </Pressable>
         </SafeAreaView>
@@ -51,6 +54,6 @@ const styles = StyleSheet.create({
     },
     info: {
         flex: 2,
-        marginLeft: 16
-    }
+        marginLeft: 16,
+    },
 });

@@ -15,7 +15,7 @@ export default function CheckBox({ label, isChecked, onCheck }) {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginVertical: 4,
+        marginRight: 3,
         alignItems: 'center'
     },
     text: {

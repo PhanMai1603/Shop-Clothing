@@ -15,7 +15,7 @@ export default function CartScreen() {
         <ProductCart/>
       </ScrollView>
       
-      <SafeAreaView style={{ position: "absolute", bottom: -39 }}>
+      <SafeAreaView style={{ position: "absolute", bottom: 0 }}>
         <FooterPurchase />
       </SafeAreaView>
     </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 70,
     marginHorizontal: 24,
-    height: "55%",
+    height: "85%",
     overflow: "hidden",
   },
 });
