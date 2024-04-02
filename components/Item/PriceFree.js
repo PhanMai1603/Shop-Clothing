@@ -12,8 +12,6 @@ export default function PriceFree() {
             <View style={styles.icon}>
                 <Heart />
             </View>
-
-
         </View>
     );
 }

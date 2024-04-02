@@ -5,6 +5,7 @@ export default function ProductName() {
         <View style={styles.container}>
             <Text style={styles.text}>English Books</Text>
         </View>
+    
     );
 }
 
