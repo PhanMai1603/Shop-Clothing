@@ -11,17 +11,17 @@ import Delete from './Delete';
 export default function ProductCart() {
     return (
         <SafeAreaView style={styles.container}>
-            <Pressable style={styles.container__details} >
+            <Pressable style={styles.container__details}>
+                <CheckBox style={styles.checkbox}/>
                 <Image style={styles.image} source={require('../../assets/images/product1.png')} />
                 <SafeAreaView style={styles.info}>
+                    <Owner/>
                     <ProductName />
                     <PriceNotFree/>
                     <Quantity/>
                 </SafeAreaView>
-                <SafeAreaView style={styles.infor}>
+                <SafeAreaView style={styles.status}>
                     <Delete/>
-                    <CheckBox/>
-                    <Owner/>
                 </SafeAreaView>
             </Pressable>
         </SafeAreaView>
@@ -32,28 +32,37 @@ const styles = StyleSheet.create({
     container: {
         marginVertical: 8,
         width: '100%',
-        height: 130,
         backgroundColor: '#fff',
         borderRadius: 10,
         elevation: 4
     },
     container__details: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         paddingHorizontal: 16,
         paddingVertical: 8
     },
+
     image: {
-        flex: 1,
         borderWidth: 1,
         borderColor: '#00000000',
         width: 100,
         height: 100,
         borderRadius: 8,
+        marginRight: 16,
     },
     info: {
-        flex: 2,
-        marginLeft: 16,
+        flex: 1,
+        justifyContent: 'center',
     },
+    status: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    checkbox: {
+        marginRight: 16,
+    }
 });

@@ -14,11 +14,13 @@ export default function Delete() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 4,
   },
   deleteButton: {
-    backgroundColor: 'gray',
-    padding: 10,
-    borderRadius: 20,
+    position: 'absolute',
+    top: 20,
+    right: 10,
   },
 });
